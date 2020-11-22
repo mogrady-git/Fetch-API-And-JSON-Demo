@@ -22,12 +22,15 @@
             <input type="text" id="title" placeholder="Title" class="form-control">
         </div>
         <div class="form-group">
-            <textarea name="" id="body" cols="30" rows="10" placeholder="body" class="form-control"></textarea>
-            <input type="submit" value="submit">
+            <textarea name="" id="body" cols="30" rows="10" placeholder="Body" class="form-control"></textarea>
+            <input type="submit" class="btn btn-warning mr-4" style="margin-top: 5px;" value="Submit" id="message">
         </div>
-
-
     </form>
+    <script>
+        function alertT() {
+          alert("This simulates adding to a JSON File. You'll need to view the console.log to see your result; as you cannot add to the contents of this particular hosted JSON file on the server located here: https://jsonplaceholder.typicode.com/posts");
+        }
+        </script>
 </div>
 
 
@@ -36,6 +39,9 @@
     document.getElementById('getUsers').addEventListener('click', getUsers);
     document.getElementById('getPosts').addEventListener('click', getPosts);
     document.getElementById('addPost').addEventListener('submit', addPost);
+    document.getElementById('message').addEventListener('click', alertT);
+
+
 
     function getText(){
         // fetch('sample.txt')
